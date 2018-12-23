@@ -1,2 +1,0 @@
-# mindweaver
-web app
