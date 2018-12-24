@@ -3,7 +3,7 @@
     <h1 class="home-title">MindWeaver</h1>
     <h3 class="home-subtitle">Make connections, form groups, expand your horizons.</h3>
     <div *ngIf="!user" class="button-row">
-      <a class="home-button" (click)="login()">Sign In</a>
+      <a class="home-button sign-in" (click)="login()">Sign In</a>
     </div>
     <div *ngIf="user" class="button-row">
       <a class="home-button" routerLink="/for_me">For Me</a>

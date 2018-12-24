@@ -50,3 +50,7 @@
     cursor: pointer;
     text-decoration: none;
 }
+
+.sign-in {
+    padding: 10px 20px;
+}

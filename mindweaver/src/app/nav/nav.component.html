@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <a class="navbar-brand" routerLink="/">MindWeaver</a>
+<nav class="navbar navbar-expand-sm navbar-light" [ngClass]="{ 'bg-light': this.router.url != '/' }">
+    <a *ngIf="this.router.url != '/'" class="navbar-brand" routerLink="/">MindWeaver</a>
     <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="navbar-collapse" (click)="collapse=true" [hidden]="collapse">
-      <ul *ngIf="user" class="navbar-nav mr-auto">
+      <ul *ngIf="user && this.router.url != '/'" class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" routerLink="/for_me">For Me <span class="sr-only">(current)</span></a>
         </li>
@@ -19,8 +19,8 @@
           <a class="nav-link" routerLink="/weave">Weave</a>
         </li>
       </ul>
-      <button *ngIf="!user" class="btn btn-outline-dark my-2 my-sm-0 ml-auto" (click)="login()">Sign In</button>
-      <div *ngIf="user" class="nav-link">Welcome, {{ user.displayName.split(' ')[0] }}!</div>
+      <button *ngIf="!user && this.router.url != '/'" class="btn btn-outline-dark my-2 my-sm-0 ml-auto" (click)="login()">Sign In</button>
+      <div *ngIf="user" class="nav-link ml-auto">Welcome, {{ user.displayName.split(' ')[0] }}!</div>
       <button *ngIf="user" class="btn btn-outline-dark my-2 my-sm-0" (click)="logout()">Sign Out</button>
     </div>
   </nav>
