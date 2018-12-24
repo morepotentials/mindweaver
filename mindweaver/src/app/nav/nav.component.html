@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <a class="navbar-brand" href="#">MindWeaver</a>
+    <a class="navbar-brand" routerLink="/">MindWeaver</a>
     <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -7,13 +7,13 @@
     <div class="navbar-collapse" (click)="collapse=true" [hidden]="collapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">For Me <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink="/for_me">For Me <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">From Me</a>
+          <a class="nav-link" routerLink="/from_me">From Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">For Others</a>
+          <a class="nav-link" routerLink="/for_others">For Others</a>
         </li>
       </ul>
       <button *ngIf="!user" class="btn btn-outline-dark my-2 my-sm-0" (click)="login()">Sign In</button>
