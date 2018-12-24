@@ -15,6 +15,9 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/for_others">For Others</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/weave">Weave</a>
+        </li>
       </ul>
       <button *ngIf="!user" class="btn btn-outline-dark my-2 my-sm-0" (click)="login()">Sign In</button>
       <div *ngIf="user" class="nav-link">Welcome, {{ user.displayName.split(' ')[0] }}!</div>

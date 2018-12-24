@@ -12,6 +12,7 @@ import { FormeComponent } from './forme/forme.component';
 import { FrommeComponent } from './fromme/fromme.component';
 import { ForothersComponent } from './forothers/forothers.component';
 import { WeaveComponent } from './weave/weave.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WeaveComponent } from './weave/weave.component';
     FormeComponent,
     FrommeComponent,
     ForothersComponent,
-    WeaveComponent
+    WeaveComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
