@@ -1,2 +1,6 @@
 /* Import Bootstrap into the global css page */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+body, html {
+    height: 100%;
+    margin: 0 auto;
+}

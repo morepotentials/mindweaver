@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Subscription } from 'rxjs';
-import {ChangeDetectorRef} from '@angular/core'
+import { ChangeDetectorRef } from '@angular/core'
 
 @Component({
   selector: 'app-nav',

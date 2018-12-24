@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Nanum+Myeongjo');
+
+.home {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-box {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transform: translateY(-5%);
+}
+
+.home-title {
+    font-size: 130px;
+    font-family: 'Courgette', cursive;
+    margin: 0;
+}
+
+.home-subtitle {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.button-row {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 65%;
+}
+
+.home-button {
+    background-color: rgb(243, 243, 243);
+    padding: 5px 10px;;
+    border-radius: 5px;
+    border: none;
+    transition: 0.5s all;
+    color: black;
+}
+
+.home-button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+    text-decoration: none;
+}
