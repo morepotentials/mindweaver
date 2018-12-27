@@ -1,3 +1,29 @@
-<p>
-  weave works!
-</p>
+
+<div>
+  <h3>All Weaves</h3>
+  <div *ngFor="let weave of this.db.weaves | async">
+    <label><strong>Title: </strong></label> {{ weave.title }}<br>
+    <label><strong>Purpose: </strong></label> {{ weave.purpose }}<br>
+    <label><strong>Creator: </strong></label> {{ weave.creator.displayName }}<br>
+    <label><strong>Members: </strong></label>
+    <p *ngFor="let member of weave.members">
+      {{ member.displayName }}
+    </p>
+    <button class="btn btn-danger" (click)="deleteWeave(weave)">Delete</button>
+    <br><br>
+  </div>
+
+  <br><br>
+  <h3>Create Weave</h3>
+  <div>
+    <input [(ngModel)]="title" placeholder="title"/>
+    <input [(ngModel)]="purpose" placeholder="purpose"/><br><br>
+    <h5>Users</h5>
+    <div *ngFor="let user of this.db.users | async">
+      <label>{{ user.displayName }}</label>
+      <input type="checkbox" (click)="clickUser(user)"/>
+    </div>
+    {{ users.length }}
+    <button class="btn btn-primary" (click)="createWeave()">Save</button>
+  </div>
+</div>

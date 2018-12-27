@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DbService } from '../db.service';
 
 @Component({
   selector: 'app-forothers',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForothersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: DbService) {}
 
   ngOnInit() {
   }

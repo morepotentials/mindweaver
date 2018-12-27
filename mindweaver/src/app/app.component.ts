@@ -22,6 +22,9 @@ export class AppComponent {
         this.router.navigate(['/'])
       }
     });
+    router.events.subscribe((val) => {
+      ref.detectChanges();
+    });
   }
 
   ngOnInit() {

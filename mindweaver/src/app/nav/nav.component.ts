@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Subscription } from 'rxjs';
-import { ChangeDetectorRef } from '@angular/core'
+import { ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -31,9 +31,6 @@ export class NavComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    setInterval(() => {
-      console.log(this.router.url);
-    }, 500);
   }
 
   ngOnDestroy() {
