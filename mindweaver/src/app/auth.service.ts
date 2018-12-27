@@ -11,7 +11,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class AuthService {
 
   private subject = new Subject<any>();
-  user: any;
+  public user: any;
 
   constructor(public afAuth: AngularFireAuth, private db: AngularFirestore) { 
     this.user = afAuth.auth.currentUser;
