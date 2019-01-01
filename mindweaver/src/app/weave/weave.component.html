@@ -1,16 +1,23 @@
 
 <div>
   <h3>All Weaves</h3>
-  <div *ngFor="let weave of this.db.weaves | async">
-    <label><strong>Title: </strong></label> {{ weave.title }}<br>
-    <label><strong>Purpose: </strong></label> {{ weave.purpose }}<br>
-    <label><strong>Creator: </strong></label> {{ weave.creator.displayName }}<br>
-    <label><strong>Members: </strong></label>
-    <p *ngFor="let member of weave.members">
-      {{ member.displayName }}
-    </p>
-    <button class="btn btn-danger" (click)="deleteWeave(weave)">Delete</button>
-    <br><br>
+  <div class="card-columns">
+    <div class="card" *ngFor="let weave of this.db.weaves | async">
+      <div class="card-header">
+          <label><strong>Title: </strong></label> {{ weave.title }}<br>
+      </div>
+      <div class="card-body">
+        
+        <!--<label><strong>Purpose: </strong></label> {{ weave.purpose }}<br>-->
+        <label><strong>Creator: </strong></label> {{ weave.creator.displayName }}<br>
+        <label><strong>Members: </strong></label>
+        <p *ngFor="let member of weave.members">
+          {{ member.displayName }}
+        </p>
+        <button class="btn btn-danger" (click)="deleteWeave(weave)">Delete</button>
+        <br><br>
+      </div>
+    </div>
   </div>
 
   <br><br>
